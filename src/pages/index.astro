@@ -6,8 +6,58 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <header>
     <h1>Z Clarkin</h1>
     <p class="subtitle">Hello Kirby friends!</p>
-    <img src="https://media2.giphy.com/media/3o7aD4pxzCQsAWAYgM/giphy.gif?cid=6c09b952n8z1galpz8c7m1eocwcnpepwsxzfemmln5rrfoxy&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="Kirby" />
+    <img src="/images/kirby/waving.gif" alt="Kirby waving" class="hero-kirby" />
   </header>
+
+  <section class="kirby-gallery kirby-wikirby">
+    <h2>Kirby from <a href="https://wikirby.com/wiki/Kirby/gallery" target="_blank" rel="noopener noreferrer">WiKirby</a></h2>
+    <p class="gallery-credit">Official artwork and sprites from the Kirby wiki</p>
+    <div class="kirby-grid">
+      <img src="/images/kirby/plush-30th.jpg" alt="Kirby plush from 30th Anniversary Music Fest" />
+      <img src="/images/kirby/one-up-sprite.png" alt="1-Up Kirby sprite from Kirby Super Star Ultra" />
+      <img src="/images/kirby/encyclopedia-cover.jpg" alt="Kirby 20th Anniversary encyclopedia cover" />
+      <img src="/images/kirby/cafe-figures.jpg" alt="Kirby Café figure collection" />
+      <img src="/images/kirby/clear-file.jpg" alt="30th Anniversary Music Fest Kirby clear file" />
+      <img src="/images/kirby/encyclopedia-internal.jpg" alt="Kirby Pupupu Encyclopedia internal cover" />
+      <img src="/images/kirby/clay-kirby.png" alt="Clay Kirby from Kirby and the Rainbow Curse" />
+      <img src="/images/kirby/kirby-warp-star.jpg" alt="Kirby on Warp Star artwork" />
+      <img src="/images/kirby/kirby-fk1.png" alt="Kirby artwork from Find Kirby!!" />
+      <img src="/images/kirby/kirby-fk2.png" alt="Kirby artwork from Find Kirby!! Full of Kirby" />
+      <img src="/images/kirby/sleeping-kirby.png" alt="Sleeping Kirby from Find Kirby!!" />
+      <img src="/images/kirby/kirby-k64.png" alt="Kirby from Kirby 64: The Crystal Shards" />
+      <img src="/images/kirby/kirby-25th.png" alt="Kirby from 25th Anniversary Orchestra Concert" />
+    </div>
+    <p class="gallery-link"><a href="https://wikirby.com/wiki/Kirby/gallery" target="_blank" rel="noopener noreferrer">Browse hundreds more on WiKirby →</a></p>
+  </section>
+
+  <section class="kirby-gallery">
+    <h2>More Kirbys (GIFs)</h2>
+    <div class="kirby-grid">
+      <img src="/images/kirby/waving.gif" alt="Kirby waving" />
+      <img src="/images/kirby/dancing.gif" alt="Kirby dancing" />
+      <img src="/images/kirby/one-up.gif" alt="Kirby 1-up" />
+      <img src="/images/kirby/waving.gif" alt="Kirby waving" />
+      <img src="/images/kirby/dancing.gif" alt="Kirby dancing" />
+      <img src="/images/kirby/one-up.gif" alt="Kirby 1-up" />
+    </div>
+  </section>
+
+  <section class="kirby-parade">
+    <div class="parade-track">
+      <img src="/images/kirby/waving.gif" alt="Kirby" />
+      <img src="/images/kirby/dancing.gif" alt="Kirby" />
+      <img src="/images/kirby/one-up.gif" alt="Kirby" />
+      <img src="/images/kirby/kirby-warp-star.jpg" alt="Kirby" />
+      <img src="/images/kirby/kirby-25th.png" alt="Kirby" />
+      <img src="/images/kirby/kirby-k64.png" alt="Kirby" />
+      <img src="/images/kirby/waving.gif" alt="Kirby" />
+      <img src="/images/kirby/dancing.gif" alt="Kirby" />
+      <img src="/images/kirby/one-up.gif" alt="Kirby" />
+      <img src="/images/kirby/kirby-warp-star.jpg" alt="Kirby" />
+      <img src="/images/kirby/kirby-25th.png" alt="Kirby" />
+      <img src="/images/kirby/kirby-k64.png" alt="Kirby" />
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
@@ -27,9 +77,92 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     font-size: 1.25rem;
   }
 
-  img {
+  .hero-kirby {
     margin-top: 1.5rem;
-    max-width: 100%;
+    max-width: 280px;
     height: auto;
+    border-radius: 12px;
+  }
+
+  .kirby-gallery {
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 2rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .kirby-gallery h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+  }
+
+  .kirby-gallery h2 a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .kirby-gallery h2 a:hover {
+    opacity: 0.9;
+  }
+
+  .gallery-credit {
+    margin: 0 0 2rem 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .gallery-link {
+    margin: 2rem 0 0 0;
+  }
+
+  .gallery-link a {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  .kirby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.25rem;
+    max-width: 960px;
+    margin: 0 auto;
+    justify-items: center;
+  }
+
+  .kirby-grid img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .kirby-parade {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    overflow: hidden;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .parade-track {
+    display: flex;
+    gap: 2rem;
+    animation: parade 30s linear infinite;
+  }
+
+  .parade-track img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 8px;
+  }
+
+  @keyframes parade {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
   }
 </style>
