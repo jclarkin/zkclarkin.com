@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Z Clarkin">
+  <header>
+    <h1>Z Clarkin</h1>
+    <p class="subtitle">Hello Kirby friends!</p>
+    <img src="https://media2.giphy.com/media/3o7aD4pxzCQsAWAYgM/giphy.gif?cid=6c09b952n8z1galpz8c7m1eocwcnpepwsxzfemmln5rrfoxy&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="Kirby" />
+  </header>
+</BaseLayout>
+
+<style>
+  header {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    max-width: 100%;
+    height: auto;
+  }
+</style>
